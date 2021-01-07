@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import ToDo from './ToDo';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+let toDoObject = [
+  {thing: "do more things"},
+  {thing: "sleep and eat"},
+  {thing: "watch tv"},
+  {thing: "lolz"}
+];
+
+
+function App(props) {
+    return(
+      <div> Here are your todos:
+        <ToDo>
+         {props=toDoObject}
+        </ToDo>
+        <br></br>
+      </div>
+    )
+  };
 
 export default App;
